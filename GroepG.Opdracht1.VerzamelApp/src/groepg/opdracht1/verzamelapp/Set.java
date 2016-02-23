@@ -5,16 +5,52 @@
  */
 package groepg.opdracht1.verzamelapp;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+
 /*
  * @autor Pim Janissen
  * @author Jeroen Janssen
  */
-
 public class Set {
- /*
- * Fields
- */
-private String naam;
 
-private 
+    /*
+     * Fields
+     */
+    private String naam;
+    private Date jaar;
+    private final ArrayList<Voorwerp> voorwerpen;
+
+    /*
+     * Properties
+     */
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setJaar(Date jaar) {
+        this.jaar = jaar;
+    }
+
+    public String getNaam() {
+        return naam;
+    }
+
+    public Date getJaar() {
+        return jaar;
+    }
+
+    public ArrayList<Voorwerp> getVoorwerpen() {
+        return (ArrayList<Voorwerp>) Collections.unmodifiableList(voorwerpen);
+    }
+
+    /*
+     * Constructoren
+     */
+    public Set(String naam, Date jaar) {
+        this.naam = naam;
+        this.jaar = jaar;
+        this.voorwerpen = new ArrayList<>();
+    }
 }
