@@ -46,4 +46,10 @@ public class Main
 
         return set;
     }
+    
+    private boolean showSets(){
+    
+            System.out.printf("these are your sets %s", sets);
+            return true;
+    }
 }
