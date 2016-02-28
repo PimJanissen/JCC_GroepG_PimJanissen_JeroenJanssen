@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author gebruiker-pc
  */
-public class Postzegel extends Voorwerp
+public class Postzegel extends Voorwerp implements Comparable<Postzegel>
 {
 
     private int lengte;
@@ -44,6 +44,7 @@ public class Postzegel extends Voorwerp
         this.breedte = breedte;
     }
 
+    @Override
     public int compareTo(Postzegel other)
     {
         return Integer.compare(this.breedte * this.lengte, other.breedte * other.lengte);

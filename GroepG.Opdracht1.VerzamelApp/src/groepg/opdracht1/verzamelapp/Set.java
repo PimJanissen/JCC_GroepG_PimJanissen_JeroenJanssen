@@ -51,6 +51,23 @@ public class Set implements Comparable<Set>
         return (ArrayList<Voorwerp>) Collections.unmodifiableList(voorwerpen);
     }
 
+    public ArrayList<Postzegel> getPostzegels()
+    {
+        ArrayList<Postzegel> postzegels = new ArrayList<>();
+
+        for (Voorwerp voorwerp : this.voorwerpen)
+        {
+            if (voorwerp instanceof Postzegel)
+            {
+                postzegels.add((Postzegel) voorwerp);
+            }
+        }
+        
+        Collections.sort(postzegels);
+        
+        return postzegels;
+    }
+
     /*
      * Constructoren
      */
@@ -60,17 +77,17 @@ public class Set implements Comparable<Set>
         this.jaar = jaar;
         this.voorwerpen = new ArrayList<>();
     }
-    
+
     public boolean addVoorwerp(Voorwerp voorwerp)
     {
         return this.voorwerpen.add(voorwerp);
     }
-    
+
     public void removeVoorwerp(Voorwerp voorwerp)
     {
         this.voorwerpen.remove(voorwerp);
     }
-  
+
     @Override
     public int compareTo(Set other)
     {

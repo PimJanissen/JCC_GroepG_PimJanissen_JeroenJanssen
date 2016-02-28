@@ -18,7 +18,10 @@ public class Collectie
 
     public ArrayList<Set> getSets()
     {
-        return (ArrayList<Set>)Collections.unmodifiableList(sets);
+        ArrayList<Set> setsToReturn = (ArrayList<Set>) Collections.unmodifiableList(this.sets);
+        Collections.sort(setsToReturn);
+        
+        return setsToReturn;
     }
     
     public ArrayList<Voorwerp> getAlleVoorwerpen()
@@ -30,7 +33,7 @@ public class Collectie
             voorwerpen.addAll(set.getVoorwerpen());
         }
         
-        return voorwerpen;
+        return (ArrayList<Voorwerp>) Collections.unmodifiableList(voorwerpen);
     }
 
     public Collectie()
