@@ -15,13 +15,13 @@ import java.util.Date;
  */
 public class Main
 {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
         ArrayList<Set> sets = new ArrayList<>();
+        System.out.printf("these are your sets %s", sets);
 
         sets.add(createSet());
     }
