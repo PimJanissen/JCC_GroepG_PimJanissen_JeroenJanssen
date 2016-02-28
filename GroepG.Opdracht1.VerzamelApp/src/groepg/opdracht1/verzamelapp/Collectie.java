@@ -20,6 +20,18 @@ public class Collectie
     {
         return (ArrayList<Set>)Collections.unmodifiableList(sets);
     }
+    
+    public ArrayList<Voorwerp> getAlleVoorwerpen()
+    {
+        ArrayList<Voorwerp> voorwerpen = new ArrayList<>();
+        
+        for(Set set : this.sets)
+        {
+            voorwerpen.addAll(set.getVoorwerpen());
+        }
+        
+        return voorwerpen;
+    }
 
     public Collectie()
     {
