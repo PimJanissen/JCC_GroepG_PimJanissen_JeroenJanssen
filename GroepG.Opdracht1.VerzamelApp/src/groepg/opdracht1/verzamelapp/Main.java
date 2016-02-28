@@ -6,7 +6,6 @@
 package groepg.opdracht1.verzamelapp;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
