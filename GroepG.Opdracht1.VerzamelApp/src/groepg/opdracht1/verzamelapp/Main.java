@@ -14,15 +14,16 @@ import java.util.Date;
  * @author gebruiker-pc
  */
 public class Main
-{
+{   
+    private static ArrayList<Set> sets;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
-        ArrayList<Set> sets = new ArrayList<>();
-
+        sets = new ArrayList<>();
         sets.add(createSet());
+        showSets();
     }
 
     private static Set createSet()
@@ -47,7 +48,7 @@ public class Main
         return set;
     }
     
-    private boolean showSets(){
+    private static boolean showSets(){
     
             System.out.printf("these are your sets %s", sets);
             return true;
