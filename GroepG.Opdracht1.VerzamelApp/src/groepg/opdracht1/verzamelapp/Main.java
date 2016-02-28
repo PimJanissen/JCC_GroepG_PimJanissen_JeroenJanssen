@@ -21,7 +21,6 @@ public class Main
     public static void main(String[] args)
     {
         ArrayList<Set> sets = new ArrayList<>();
-        System.out.printf("these are your sets %s", sets);
 
         sets.add(createSet());
     }
@@ -47,5 +46,10 @@ public class Main
 
         return set;
     }
-
+    
+    private boolean showSets(){
+    
+            System.out.printf("these are your sets %s", sets);
+            return true;
+    }
 }
