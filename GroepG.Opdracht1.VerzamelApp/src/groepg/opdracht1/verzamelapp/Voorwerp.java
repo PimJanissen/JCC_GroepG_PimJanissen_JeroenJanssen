@@ -24,12 +24,12 @@ public abstract class Voorwerp
      */
     public void setUitgaveJaar(Date uitgaveJaar)
     {
-        this.uitgaveJaar = uitgaveJaar;
+        this.uitgaveJaar = (Date) uitgaveJaar.clone();
     }
 
     public Date getUitgaveJaar()
     {
-        return uitgaveJaar;
+        return (Date) uitgaveJaar.clone();
     }
 
     /*
@@ -37,6 +37,6 @@ public abstract class Voorwerp
      */
     public Voorwerp(Date uitgaveJaar)
     {
-        this.uitgaveJaar = uitgaveJaar;
+        this.uitgaveJaar = (Date) uitgaveJaar.clone();
     }
 }

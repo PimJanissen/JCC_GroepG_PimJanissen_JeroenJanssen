@@ -5,9 +5,11 @@
  */
 package groepg.opdracht1.verzamelapp;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.Objects;
 
 /*
  * @autor Pim Janissen
@@ -33,7 +35,7 @@ public class Set implements Comparable<Set>
 
     public void setJaar(Date jaar)
     {
-        this.jaar = jaar;
+        this.jaar = (Date) jaar.clone();
     }
 
     public String getNaam()
@@ -43,7 +45,7 @@ public class Set implements Comparable<Set>
 
     public Date getJaar()
     {
-        return jaar;
+        return (Date) jaar.clone();
     }
 
     public ArrayList<Voorwerp> getVoorwerpen()
@@ -62,9 +64,9 @@ public class Set implements Comparable<Set>
                 postzegels.add((Postzegel) voorwerp);
             }
         }
-        
+
         Collections.sort(postzegels);
-        
+
         return postzegels;
     }
 
@@ -74,7 +76,7 @@ public class Set implements Comparable<Set>
     public Set(String naam, Date jaar)
     {
         this.naam = naam;
-        this.jaar = jaar;
+        this.jaar = (Date) jaar.clone();
         this.voorwerpen = new ArrayList<>();
     }
 
@@ -89,8 +91,49 @@ public class Set implements Comparable<Set>
     }
 
     @Override
+    public boolean equals(Object other)
+    {
+        if (other == null)
+        {
+            return false;
+        }
+
+        if (other instanceof Set)
+        {
+            throw new InvalidParameterException();
+        }
+
+        return Integer.compare(this.hashCode(), other.hashCode()) == 0;
+    }
+
+    /*
+    Generated
+     */
+    @Override
+    public int hashCode()
+    {
+        int hash = 3;
+        hash = 29 * hash + Objects.hashCode(this.naam);
+        hash = 29 * hash + Objects.hashCode(this.jaar);
+        hash = 29 * hash + Objects.hashCode(this.voorwerpen);
+        return hash;
+    }
+
+    @Override
     public int compareTo(Set other)
     {
-        return this.jaar.compareTo(other.getJaar());
+        int returnValue = this.jaar.compareTo(other.jaar);
+
+        if (returnValue != 0)
+        {
+            returnValue = this.naam.compareTo(other.naam);
+            
+            if (returnValue != 0)
+            {
+                returnValue = Integer.compare(this.voorwerpen.size(), other.voorwerpen.size());
+            }
+        }
+        
+        return returnValue;
     }
 }

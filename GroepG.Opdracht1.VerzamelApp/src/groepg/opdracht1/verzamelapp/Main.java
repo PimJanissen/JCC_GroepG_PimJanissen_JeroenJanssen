@@ -5,7 +5,9 @@
  */
 package groepg.opdracht1.verzamelapp;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -13,8 +15,10 @@ import java.util.Date;
  * @author gebruiker-pc
  */
 public class Main
-{   
+{
+
     private static ArrayList<Set> sets;
+
     /**
      * @param args the command line arguments
      */
@@ -39,17 +43,18 @@ public class Main
             set.addVoorwerp(new Postzegel(18, 13, yearFormat.parse("1995")));
             set.addVoorwerp(new Postzegel(8, 20, yearFormat.parse("2001")));
         } 
-        catch (Exception e)
+        catch (ParseException e)
         {
-
+            System.out.printf("De testdata kon niet worden toegevoegd door de volgende fout: %s", e.toString());
         }
 
         return set;
     }
-    
-    private static boolean showSets(){
-    
-            System.out.printf("these are your sets %s", sets);
-            return true;
+
+    private static boolean showSets()
+    {
+
+        System.out.printf("these are your sets %s", sets);
+        return true;
     }
 }

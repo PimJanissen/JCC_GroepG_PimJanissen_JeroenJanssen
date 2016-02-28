@@ -5,6 +5,7 @@
  */
 package groepg.opdracht1.verzamelapp;
 
+import java.security.InvalidParameterException;
 import java.util.Date;
 
 /**
@@ -44,9 +45,37 @@ public class Postzegel extends Voorwerp implements Comparable<Postzegel>
         this.breedte = breedte;
     }
 
+    @Override 
+    public boolean equals(Object other)
+    {
+        if (other == null)
+        {
+            return false;
+        }
+        
+        if (other instanceof Postzegel)
+        {
+            throw new InvalidParameterException();
+        }
+                
+        return Integer.compare(this.hashCode(), other.hashCode()) == 0;
+    }
+
+    /*
+    Generated
+    */
+    @Override
+    public int hashCode()
+    {
+        int hash = 7;
+        hash = 47 * hash + this.lengte;
+        hash = 47 * hash + this.breedte;
+        return hash;
+    }
+    
     @Override
     public int compareTo(Postzegel other)
     {
-        return Integer.compare(this.breedte * this.lengte, other.breedte * other.lengte);
+        return Integer.compare(this.hashCode(), other.hashCode());
     }
 }
