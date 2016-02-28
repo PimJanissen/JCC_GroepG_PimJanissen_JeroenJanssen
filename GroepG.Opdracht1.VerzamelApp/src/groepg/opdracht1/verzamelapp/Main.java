@@ -5,9 +5,7 @@
  */
 package groepg.opdracht1.verzamelapp;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -24,20 +22,30 @@ public class Main
     public static void main(String[] args)
     {
         ArrayList<Set> sets = new ArrayList<>();
-        
-        fillSets(sets);
+
+        sets.add(createSet());
     }
 
-    private static void fillSets(ArrayList<Set> listToFill)
-    {
-        listToFill.add(createSet());
-    }
-    
-    private static Set createSet() throws ParseException
+    private static Set createSet()
     {
         Set set = new Set("Bierdopjes", new Date());
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-        set.addVoorwerp(new Bierdopje("Heineken", sdf.parse("12-01-2016")));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+        SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
+
+        try
+        {
+            set.addVoorwerp(new Bierdopje("Heineken", dateFormat.parse("12-01-2016")));
+            set.addVoorwerp(new Bierdopje("Hertog Jan", dateFormat.parse("15-8-2015")));
+            set.addVoorwerp(new Postzegel(12, 25, yearFormat.parse("2011")));
+            set.addVoorwerp(new Postzegel(18, 13, yearFormat.parse("1995")));
+            set.addVoorwerp(new Postzegel(8, 20, yearFormat.parse("2001")));
+        } 
+        catch (Exception e)
+        {
+
+        }
+
+        return set;
     }
 
 }

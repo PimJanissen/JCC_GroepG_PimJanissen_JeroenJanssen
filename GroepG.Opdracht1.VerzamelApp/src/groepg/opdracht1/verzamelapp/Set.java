@@ -70,7 +70,8 @@ public class Set implements Comparable<Set>
     {
         this.voorwerpen.remove(voorwerp);
     }
-    
+  
+    @Override
     public int compareTo(Set other)
     {
         return this.jaar.compareTo(other.getJaar());
