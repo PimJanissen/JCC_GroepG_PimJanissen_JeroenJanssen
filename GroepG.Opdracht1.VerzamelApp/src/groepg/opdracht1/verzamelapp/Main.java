@@ -6,7 +6,6 @@
 package groepg.opdracht1.verzamelapp;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -20,10 +19,10 @@ public class Main
      */
     public static void main(String[] args)
     {
-        ArrayList<Set> sets = new ArrayList<>();
-        System.out.printf("these are your sets %s", sets);
-
-        sets.add(createSet());
+        Collectie collectie = new Collectie();
+        collectie.addSet(createSet());
+        
+        System.out.printf("these are your sets %s", collectie.getSets());
     }
 
     private static Set createSet()
@@ -47,5 +46,4 @@ public class Main
 
         return set;
     }
-
 }
