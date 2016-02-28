@@ -11,7 +11,8 @@ import java.util.Date;
  * @author Pim Janissen
  * @author Jeroen Janssen
  */
-abstract class Voorwerp {
+public abstract class Voorwerp
+{
 
     /*
      * Fields
@@ -20,19 +21,22 @@ abstract class Voorwerp {
 
     /*
     
-    */
-    public void setUitgaveJaar(Date uitgaveJaar) {
+     */
+    public void setUitgaveJaar(Date uitgaveJaar)
+    {
         this.uitgaveJaar = uitgaveJaar;
     }
 
-    public Date getUitgaveJaar() {
+    public Date getUitgaveJaar()
+    {
         return uitgaveJaar;
     }
 
     /*
      * Consttructoren
      */
-    public Voorwerp(Date uitgaveJaar) {
+    public Voorwerp(Date uitgaveJaar)
+    {
         this.uitgaveJaar = uitgaveJaar;
     }
 }

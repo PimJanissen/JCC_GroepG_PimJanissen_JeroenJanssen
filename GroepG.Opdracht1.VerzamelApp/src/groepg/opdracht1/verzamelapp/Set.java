@@ -13,7 +13,8 @@ import java.util.Date;
  * @autor Pim Janissen
  * @author Jeroen Janssen
  */
-public class Set {
+public class Set implements Comparable<Set>
+{
 
     /*
      * Fields
@@ -25,32 +26,53 @@ public class Set {
     /*
      * Properties
      */
-    public void setNaam(String naam) {
+    public void setNaam(String naam)
+    {
         this.naam = naam;
     }
 
-    public void setJaar(Date jaar) {
+    public void setJaar(Date jaar)
+    {
         this.jaar = jaar;
     }
 
-    public String getNaam() {
+    public String getNaam()
+    {
         return naam;
     }
 
-    public Date getJaar() {
+    public Date getJaar()
+    {
         return jaar;
     }
 
-    public ArrayList<Voorwerp> getVoorwerpen() {
+    public ArrayList<Voorwerp> getVoorwerpen()
+    {
         return (ArrayList<Voorwerp>) Collections.unmodifiableList(voorwerpen);
     }
 
     /*
      * Constructoren
      */
-    public Set(String naam, Date jaar) {
+    public Set(String naam, Date jaar)
+    {
         this.naam = naam;
         this.jaar = jaar;
         this.voorwerpen = new ArrayList<>();
+    }
+    
+    public boolean addVoorwerp(Voorwerp voorwerp)
+    {
+        return this.voorwerpen.add(voorwerp);
+    }
+    
+    public void removeVoorwerp(Voorwerp voorwerp)
+    {
+        this.voorwerpen.remove(voorwerp);
+    }
+    
+    public int compareTo(Set other)
+    {
+        return this.jaar.compareTo(other.getJaar());
     }
 }
