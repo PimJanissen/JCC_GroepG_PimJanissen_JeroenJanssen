@@ -124,7 +124,7 @@ public class DatabaseMediator
         return null;
     }
 
-    public void save(Collectie collectie) throws IOException;
+//    public void save(Collectie collectie) throws IOException;
 
     private void initConnection() throws SQLException
     {

@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Properties;
 
 /**
  *
@@ -52,6 +53,14 @@ public class Main {
                         count ++;
         }
 
+        return true;
+    }
+    
+    private static boolean CreateProperties(){
+        Properties properties = new Properties();
+        properties.setProperty("url", "jdbc:mysql://localhost:3306/jcc_verzamelapp");
+        properties.setProperty("username", "jcc");
+        properties.setProperty("password", "jcc");
         return true;
     }
 }
