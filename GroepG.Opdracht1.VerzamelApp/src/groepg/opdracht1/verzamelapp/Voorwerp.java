@@ -39,4 +39,10 @@ public abstract class Voorwerp
     {
         this.uitgaveJaar = (Date) uitgaveJaar.clone();
     }
+    
+    @Override
+    public String toString()
+    {
+        return String.format("Uitgavejaar: %s", this.uitgaveJaar.toString());
+    }
 }

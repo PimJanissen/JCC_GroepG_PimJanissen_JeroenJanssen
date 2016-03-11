@@ -50,7 +50,7 @@ public class Set implements Comparable<Set>
 
     public ArrayList<Voorwerp> getVoorwerpen()
     {
-        return (ArrayList<Voorwerp>) Collections.unmodifiableList(voorwerpen);
+        return new ArrayList<>(Collections.unmodifiableList(voorwerpen));
     }
 
     public ArrayList<Postzegel> getPostzegels()

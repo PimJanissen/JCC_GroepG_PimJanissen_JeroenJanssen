@@ -13,6 +13,7 @@ import java.util.Date;
  */
 public class Bierdopje extends Voorwerp
 {
+
     private String merk;
 
     public String getMerk()
@@ -31,4 +32,9 @@ public class Bierdopje extends Voorwerp
         this.merk = merk;
     }
 
+    @Override
+    public String toString()
+    {
+        return super.toString() + String.format(" - merk: %s", this.merk);
+    }
 }

@@ -78,4 +78,10 @@ public class Postzegel extends Voorwerp implements Comparable<Postzegel>
     {
         return Integer.compare(this.hashCode(), other.hashCode());
     }
+    
+    @Override
+    public String toString()
+    {
+        return super.toString() + String.format(" - lengte: %s, breedte: %s", Integer.toString(this.lengte), Integer.toString(this.breedte));
+    }
 }
