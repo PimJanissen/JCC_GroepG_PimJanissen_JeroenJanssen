@@ -26,12 +26,6 @@ public class Main
      */
     public static void main(String[] args)
     {
-        /*
-        sets = new ArrayList<>();
-        sets.add(createSet());
-        showSets();
-         */
-
         Properties properties = new Properties();
         properties.setProperty("url", "jdbc:mysql://localhost:3306/jcc_verzamelapp");
         properties.setProperty("username", "jcc");
@@ -71,3 +65,4 @@ public class Main
         return true;
     }
 }
+    
