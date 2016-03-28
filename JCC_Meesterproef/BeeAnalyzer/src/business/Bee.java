@@ -12,15 +12,15 @@ package business;
 public class Bee
 {
     private int primaryFertility;
-    private int primaryLifespan;
-    private int primaryPollination;
+    private double primaryLifespan;
+    private double primaryPollination;
     private String primarySpecies;
-    private int primaryWorkspeed;
+    private double primaryWorkspeed;
     private int secondaryFertility;
-    private int secondaryLifespan;
-    private int secondaryPollination;
+    private double secondaryLifespan;
+    private double secondaryPollination;
     private String secondarySpecies;
-    private int secondaryWorkspeed;
+    private double secondaryWorkspeed;
 
     public int getPrimaryFertility()
     {
@@ -32,22 +32,22 @@ public class Bee
         this.primaryFertility = primaryFertility;
     }
 
-    public int getPrimaryLifespan()
+    public double getPrimaryLifespan()
     {
         return primaryLifespan;
     }
 
-    public void setPrimaryLifespan(int primaryLifespan)
+    public void setPrimaryLifespan(double primaryLifespan)
     {
         this.primaryLifespan = primaryLifespan;
     }
 
-    public int getPrimaryPollination()
+    public double getPrimaryPollination()
     {
         return primaryPollination;
     }
 
-    public void setPrimaryPollination(int primaryPollination)
+    public void setPrimaryPollination(double primaryPollination)
     {
         this.primaryPollination = primaryPollination;
     }
@@ -62,12 +62,12 @@ public class Bee
         this.primarySpecies = primarySpecies;
     }
 
-    public int getPrimaryWorkspeed()
+    public double getPrimaryWorkspeed()
     {
         return primaryWorkspeed;
     }
 
-    public void setPrimaryWorkspeed(int primaryWorkspeed)
+    public void setPrimaryWorkspeed(double primaryWorkspeed)
     {
         this.primaryWorkspeed = primaryWorkspeed;
     }
@@ -82,22 +82,22 @@ public class Bee
         this.secondaryFertility = secondaryFertility;
     }
 
-    public int getSecondaryLifespan()
+    public double getSecondaryLifespan()
     {
         return secondaryLifespan;
     }
 
-    public void setSecondaryLifespan(int secondaryLifespan)
+    public void setSecondaryLifespan(double secondaryLifespan)
     {
         this.secondaryLifespan = secondaryLifespan;
     }
 
-    public int getSecondaryPollination()
+    public double getSecondaryPollination()
     {
         return secondaryPollination;
     }
 
-    public void setSecondaryPollination(int secondaryPollination)
+    public void setSecondaryPollination(double secondaryPollination)
     {
         this.secondaryPollination = secondaryPollination;
     }
@@ -112,17 +112,17 @@ public class Bee
         this.secondarySpecies = secondarySpecies;
     }
 
-    public int getSecondaryWorkspeed()
+    public double getSecondaryWorkspeed()
     {
         return secondaryWorkspeed;
     }
 
-    public void setSecondaryWorkspeed(int secondaryWorkspeed)
+    public void setSecondaryWorkspeed(double secondaryWorkspeed)
     {
         this.secondaryWorkspeed = secondaryWorkspeed;
     }
 
-    public Bee(int primaryFertility, int primaryLifespan, int primaryPollination, String primarySpecies, int primaryWorkspeed, int secondaryFertility, int secondaryLifespan, int secondaryPollination, String secondarySpecies, int secondaryWorkspeed)
+    public Bee(int primaryFertility, double primaryLifespan, double primaryPollination, String primarySpecies, double primaryWorkspeed, int secondaryFertility, double secondaryLifespan, double secondaryPollination, String secondarySpecies, double secondaryWorkspeed)
     {
         this.primaryFertility = primaryFertility;
         this.primaryLifespan = primaryLifespan;

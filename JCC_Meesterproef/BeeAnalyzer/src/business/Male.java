@@ -12,7 +12,7 @@ package business;
 public class Male extends Bee
 {
     
-    public Male(int primaryFertility, int primaryLifespan, int primaryPollination, String primarySpecies, int primaryWorkspeed, int secondaryFertility, int secondaryLifespan, int secondaryPollination, String secondarySpecies, int secondaryWorkspeed)
+    public Male(int primaryFertility, double primaryLifespan, double primaryPollination, String primarySpecies, double primaryWorkspeed, int secondaryFertility, double secondaryLifespan, double secondaryPollination, String secondarySpecies, double secondaryWorkspeed)
     {
         super(primaryFertility, primaryLifespan, primaryPollination, primarySpecies, primaryWorkspeed, secondaryFertility, secondaryLifespan, secondaryPollination, secondarySpecies, secondaryWorkspeed);
     }

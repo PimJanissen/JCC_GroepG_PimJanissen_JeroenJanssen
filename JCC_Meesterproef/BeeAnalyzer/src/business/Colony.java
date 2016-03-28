@@ -15,18 +15,15 @@ import java.util.Collections;
 public class Colony
 {
 
-    private int year;
-    private Queen queen;
-    private ArrayList<Bee> bees;
+    private final int year;
+    private final Queen queen;
+    private Colony parentColony;
+
+    private final ArrayList<Bee> bees;
 
     public int getYear()
     {
         return year;
-    }
-
-    public void setYear(int year)
-    {
-        this.year = year;
     }
 
     public Queen getQueen()
@@ -34,24 +31,25 @@ public class Colony
         return queen;
     }
 
-    public void setQueen(Queen queen)
-    {
-        this.queen = queen;
-    }
-
     public ArrayList<Bee> getBees()
     {
         return (ArrayList<Bee>) Collections.unmodifiableList(bees);
     }
 
-    public void setBees(ArrayList<Bee> bees)
+    public Colony getParentColony()
     {
-        this.bees = bees;
+        return parentColony;
     }
 
-    public Colony(int year, Queen queen)
+    public void setParentColony(Colony parentColony)
+    {
+        this.parentColony = parentColony;
+    }
+
+    public Colony(int year, Queen queen, ArrayList<Bee> bees)
     {
         this.year = year;
         this.queen = queen;
+        this.bees = new ArrayList<>();
     }
 }

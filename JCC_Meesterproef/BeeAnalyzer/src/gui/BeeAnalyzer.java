@@ -5,6 +5,7 @@
  */
 package gui;
 
+import business.ColonyManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,14 +18,16 @@ import javafx.stage.Stage;
  */
 public class BeeAnalyzer extends Application
 {
-    
+
+    private static ColonyManager manager;
+
     @Override
     public void start(Stage stage) throws Exception
     {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.show();
     }
@@ -34,7 +37,23 @@ public class BeeAnalyzer extends Application
      */
     public static void main(String[] args)
     {
+        if (args.length == 0)
+        {
+            throw new IllegalArgumentException("Must add a filepath when opening the application.");
+        }
+
+        manager = new ColonyManager();
+
+        try
+        {
+            manager.loadBeeHives(args[0]);
+        }
+        catch (Exception ex)
+        {
+            System.err.println(ex);
+        }
+
         launch(args);
     }
-    
+
 }

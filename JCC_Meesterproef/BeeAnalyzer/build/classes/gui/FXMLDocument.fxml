@@ -8,70 +8,70 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="672.0" prefWidth="1000.0" style="-fx-background-color: #aaaaff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="984.0" prefWidth="1462.0" style="-fx-background-color: #aaaaff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FXMLDocumentController">
    <children>
-      <Pane prefHeight="677.0" prefWidth="773.0" style="-fx-background-color: #ffaaaa;" />
-      <Label fx:id="lblBeeCount" layoutX="806.0" layoutY="69.0" text="Bee count">
+      <Pane prefHeight="984.0" prefWidth="1153.0" style="-fx-background-color: #ffaaaa;" />
+      <Label layoutX="1178.0" layoutY="60.0" text="Bee count">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="tfBeeCount" editable="false" layoutX="923.0" layoutY="69.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #eeffee;" />
-      <TextField fx:id="tfPrimaryFertility" editable="false" layoutX="977.0" layoutY="156.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <Label fx:id="lblAverage" layoutX="806.0" layoutY="115.0" text="Average:">
+      <TextField editable="false" layoutX="1295.0" layoutY="60.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #eeffee;" />
+      <TextField editable="false" layoutX="1349.0" layoutY="147.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <Label layoutX="1178.0" layoutY="106.0" text="Average:">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblPrimaryFertility" layoutX="813.0" layoutY="156.0" text="Primary Fertility">
+      <Label layoutX="1185.0" layoutY="147.0" text="Primary Fertility">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblPrimaryLifespan" layoutX="813.0" layoutY="187.0" text="Primary Lifespan">
+      <Label layoutX="1185.0" layoutY="178.0" text="Primary Lifespan">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="tfPrimaryLifespan" editable="false" layoutX="977.0" layoutY="187.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <TextField fx:id="tfPrimaryPollination" editable="false" layoutX="977.0" layoutY="218.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <Label fx:id="lblPrimaryPollination" layoutX="813.0" layoutY="218.0" text="Primary Pollination">
+      <TextField editable="false" layoutX="1349.0" layoutY="178.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <TextField editable="false" layoutX="1349.0" layoutY="209.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <Label layoutX="1185.0" layoutY="209.0" text="Primary Pollination">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblPrimarySpecies" layoutX="813.0" layoutY="250.0" text="Primary Species">
+      <Label layoutX="1185.0" layoutY="241.0" text="Primary Species">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="tfPrimarySpecies" editable="false" layoutX="977.0" layoutY="250.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <TextField fx:id="tfSecondarySpecies" editable="false" layoutX="977.0" layoutY="387.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <Label fx:id="lblSecondarySpecies" layoutX="813.0" layoutY="387.0" text="Secondary Species">
+      <TextField editable="false" layoutX="1349.0" layoutY="241.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <TextField editable="false" layoutX="1349.0" layoutY="378.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <Label layoutX="1185.0" layoutY="378.0" text="Secondary Species">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblSecondaryPollination" layoutX="813.0" layoutY="355.0" text="Secondary Pollination">
+      <Label layoutX="1185.0" layoutY="346.0" text="Secondary Pollination">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="tfSecondaryPollination" editable="false" layoutX="977.0" layoutY="355.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <TextField fx:id="tfSecondaryLifespan" editable="false" layoutX="977.0" layoutY="324.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <Label fx:id="lblSecondaryLifespan" layoutX="813.0" layoutY="324.0" text="Secondary Lifespan">
+      <TextField editable="false" layoutX="1349.0" layoutY="346.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <TextField editable="false" layoutX="1349.0" layoutY="315.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <Label layoutX="1185.0" layoutY="315.0" text="Secondary Lifespan">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblSecondaryFertility" layoutX="813.0" layoutY="293.0" text="Secondary Fertility">
+      <Label layoutX="1185.0" layoutY="284.0" text="Secondary Fertility">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="tfSecondaryFertility" editable="false" layoutX="977.0" layoutY="293.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
-      <TextField fx:id="tfFoundingYear" editable="false" layoutX="923.0" layoutY="35.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #eeffee;" />
-      <Label fx:id="lblFoundingYear" layoutX="802.0" layoutY="35.0" text="Founding year">
+      <TextField editable="false" layoutX="1349.0" layoutY="284.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #eeffee;" />
+      <TextField editable="false" layoutX="1295.0" layoutY="26.0" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #eeffee;" />
+      <Label layoutX="1174.0" layoutY="26.0" text="Founding year">
          <font>
             <Font size="16.0" />
          </font>
