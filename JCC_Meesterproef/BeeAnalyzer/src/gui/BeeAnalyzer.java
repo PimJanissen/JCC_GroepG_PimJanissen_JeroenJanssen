@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public class BeeAnalyzer extends Application
 {
 
-    private static ColonyManager manager;
+    protected static ColonyManager manager;
 
     @Override
     public void start(Stage stage) throws Exception
@@ -46,7 +46,7 @@ public class BeeAnalyzer extends Application
 
         try
         {
-            manager.loadBeeHives(args[0]);
+            manager.loadColonies(args[0]);
         }
         catch (Exception ex)
         {

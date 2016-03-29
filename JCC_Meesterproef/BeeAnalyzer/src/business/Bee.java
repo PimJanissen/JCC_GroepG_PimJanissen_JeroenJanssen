@@ -5,6 +5,8 @@
  */
 package business;
 
+import java.util.Objects;
+
 /**
  *
  * @author gebruiker-pc
@@ -135,4 +137,82 @@ public class Bee
         this.secondarySpecies = secondarySpecies;
         this.secondaryWorkspeed = secondaryWorkspeed;
     }    
+
+    @Override
+    public int hashCode()
+    {
+        int hash = 3;
+        hash = 89 * hash + this.primaryFertility;
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.primaryLifespan) ^ (Double.doubleToLongBits(this.primaryLifespan) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.primaryPollination) ^ (Double.doubleToLongBits(this.primaryPollination) >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.primarySpecies);
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.primaryWorkspeed) ^ (Double.doubleToLongBits(this.primaryWorkspeed) >>> 32));
+        hash = 89 * hash + this.secondaryFertility;
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.secondaryLifespan) ^ (Double.doubleToLongBits(this.secondaryLifespan) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.secondaryPollination) ^ (Double.doubleToLongBits(this.secondaryPollination) >>> 32));
+        hash = 89 * hash + Objects.hashCode(this.secondarySpecies);
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.secondaryWorkspeed) ^ (Double.doubleToLongBits(this.secondaryWorkspeed) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj)
+        {
+            return true;
+        }
+        if (obj == null)
+        {
+            return false;
+        }
+        if (getClass() != obj.getClass())
+        {
+            return false;
+        }
+        final Bee other = (Bee) obj;
+        if (this.primaryFertility != other.primaryFertility)
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.primaryLifespan) != Double.doubleToLongBits(other.primaryLifespan))
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.primaryPollination) != Double.doubleToLongBits(other.primaryPollination))
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.primaryWorkspeed) != Double.doubleToLongBits(other.primaryWorkspeed))
+        {
+            return false;
+        }
+        if (this.secondaryFertility != other.secondaryFertility)
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.secondaryLifespan) != Double.doubleToLongBits(other.secondaryLifespan))
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.secondaryPollination) != Double.doubleToLongBits(other.secondaryPollination))
+        {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.secondaryWorkspeed) != Double.doubleToLongBits(other.secondaryWorkspeed))
+        {
+            return false;
+        }
+        if (!Objects.equals(this.primarySpecies, other.primarySpecies))
+        {
+            return false;
+        }
+        if (!Objects.equals(this.secondarySpecies, other.secondarySpecies))
+        {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }

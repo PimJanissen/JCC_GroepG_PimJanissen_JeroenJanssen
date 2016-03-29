@@ -735,7 +735,6 @@ public class JSONHandler
                     break;
                 case "parentColony":
                     parentColony = parseColony(jsonReader, colonies);
-
                     for (Colony colony : colonies)
                     {
                         if (colony.equals(parentColony))
@@ -761,8 +760,13 @@ public class JSONHandler
         jsonReader.endObject();
 
         Colony colony = new Colony(year, queen, bees);
-        colony.setParentColony(parentColony);
 
+        if (parentColony != null)
+        {
+            colony.setParentColony(parentColony);
+            parentColony.addChildColony(colony);
+        }
+        
         return colony;
     }
 }

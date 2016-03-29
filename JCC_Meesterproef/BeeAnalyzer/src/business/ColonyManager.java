@@ -7,7 +7,7 @@ package business;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Iterator;
 import persistance.JSONHandler;
 
 /**
@@ -16,20 +16,21 @@ import persistance.JSONHandler;
  */
 public class ColonyManager
 {
-    private ArrayList<Colony> colonies;
+    private final ArrayList<Colony> colonies;
     
     public ColonyManager()
     {
         this.colonies = new ArrayList<>();
     }
 
-    public ArrayList<Colony> getBeeHives()
+    public Iterator<Colony> getColonies()
     {
-        return (ArrayList<Colony>)Collections.unmodifiableList(colonies);
+        return colonies.iterator();
     }
     
-    public void loadBeeHives(String filePath) throws IOException
+    public void loadColonies(String filePath) throws IOException
     {
         colonies.addAll(JSONHandler.loadColonies(filePath));
+        colonies.sort(Colony.COMPARE_BY_YEAR);
     }
 }

@@ -7,24 +7,15 @@
     <offline-allowed/>
   </information>
   <resources>
-<<<<<<< HEAD
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BeeAnalyzer.jar" size="12323" download="eager" />
+    <jar href="BeeAnalyzer.jar" size="19330" download="eager" />
     <jar href="lib/gson-2.6.2.jar" size="229650" download="eager" />
-=======
-    <j2se version="1.6+" java-vm-args="-javaagent:"C:\Users\jhlmj\AppData\Roaming\NetBeans\8.1\modules\ext\jacocoagent.jar"=includes=business.*:gui.*,destfile="C:\Users\jhlmj\Documents\GitHub\JCC_GroepG_PimJanissen_JeroenJanssen\JCC_Meesterproef\BeeAnalyzer\jacoco.exec-444208173944624" "  href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BeeAnalyzer.jar" size="7956" download="eager" />
->>>>>>> 83b37d4968a31faed399db8fce6f88144dda4e94
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="BeeAnalyzer" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-<<<<<<< HEAD
   <jfx:javafx-desc  width="800" height="600" main-class="gui.BeeAnalyzer"  name="BeeAnalyzer" >
     <fx:argument>C:\Users\gebruiker-pc\Documents\GitHub\JCC_GroepG_PimJanissen_JeroenJanssen\JCC_Meesterproef\colonies.json</fx:argument>
   </jfx:javafx-desc>
-=======
-  <jfx:javafx-desc  width="800" height="600" main-class="gui.BeeAnalyzer"  name="BeeAnalyzer" />
->>>>>>> 83b37d4968a31faed399db8fce6f88144dda4e94
   <update check="always"/>
 </jnlp>

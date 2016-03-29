@@ -5,6 +5,8 @@
  */
 package business;
 
+import java.util.Objects;
+
 /**
  *
  * @author gebruiker-pc
@@ -39,4 +41,42 @@ public class Queen extends Female
     {
         super(primaryFertility, primaryLifespan, primaryPollination, primarySpecies, primaryWorkspeed, secondaryFertility, secondaryLifespan, secondaryPollination, secondarySpecies, secondaryWorkspeed);
     }
+
+    @Override
+    public int hashCode()
+    {
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(this.drone);
+        hash = 59 * hash + Objects.hashCode(this.princess);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj)
+        {
+            return true;
+        }
+        if (obj == null)
+        {
+            return false;
+        }
+        if (getClass() != obj.getClass())
+        {
+            return false;
+        }
+        final Queen other = (Queen) obj;
+        if (!Objects.equals(this.drone, other.drone))
+        {
+            return false;
+        }
+        if (!Objects.equals(this.princess, other.princess))
+        {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }
